@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+  <p>Name : <input type="text" ng-model="lastName"></p>
+  <h1 ng-repeat="x in firstName">Hello {{firstName.indexOf(x)}}</h1>
+</div>
+
+<script>
+	var app = angular.module("myApp", []);
+	app.controller("myCtrl", function($scope){
+		$scope.firstName = ["John", "George", "Jeff"];
+		$scope.lastName = "Doe";
+	})
+</script>
+
+</body>
+</html>
